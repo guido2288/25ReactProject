@@ -1,0 +1,37 @@
+.wrapper {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #0A2344;
+  }
+
+.wrapper h2{
+  color: white;
+}
+  
+  .accordian {
+    max-width: 300px;
+    margin: 0 1rem;
+  }
+  
+  .item {
+    background: white;
+    margin-bottom: 1rem;
+    padding: 1rem 1.25rem;
+  }
+  
+  .title {
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .content {
+    color: #4b4b4b;
+    margin-top: 1rem;
+  }
