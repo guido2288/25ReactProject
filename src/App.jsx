@@ -1,4 +1,5 @@
 import Acordian from "./components/Accordian/Acordian"
+import RandomColorGen from "./components/RandomColorGen/RandomColorGen"
 
 function App() {
 
@@ -6,7 +7,7 @@ function App() {
 
   return (
     <main className="main-container">
-      <Acordian />
+      <RandomColorGen />
     </main>
   )
 }
