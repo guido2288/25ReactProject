@@ -1,5 +1,6 @@
 import Acordian from "./components/Accordian/Acordian"
 import RandomColorGen from "./components/RandomColorGen/RandomColorGen"
+import StarsRating from "./components/StartRating/StarsRating"
 
 function App() {
 
@@ -7,7 +8,7 @@ function App() {
 
   return (
     <main className="main-container">
-      <RandomColorGen />
+      <StarsRating stars={5}/>
     </main>
   )
 }

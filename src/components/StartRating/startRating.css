@@ -1,0 +1,46 @@
+.starts-container{
+    height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #e5d3bc;
+}
+
+.pop-stars{
+    background-color: white;
+    border: solid 2.5px #7eabcd;
+    border-radius: 5px;
+    max-width: 500px;
+    padding: 2.5rem;
+    position: relative;
+}
+
+.icon-hat{
+    position: absolute;
+    top: 0;
+    right: 40%;
+    font-size: 2rem;
+    background-color: #4871b6;
+    color: white;
+    padding: 0 10px 5px 10px;
+    border-radius: 0 0 25px 25px;
+}
+
+.pop-stars h2{
+    font-weight: 500;
+}
+
+.pop-stars p{
+    text-align: center;
+    color: #676767;
+    margin-top: 1rem;
+}
+
+.stars-container{
+    width: 100%;
+    text-align: center;
+    font-size: 2.5rem;
+    color: yellow;
+    cursor: pointer;
+}
