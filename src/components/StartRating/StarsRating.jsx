@@ -4,7 +4,7 @@ import { FaRedhat } from "react-icons/fa6";
 
 import './startRating.css'
 import { useState } from "react";
-const StarsRating = ({stars}) => {
+const StarsRating = ({stars = 5}) => {
 
   const [rating, setRating] = useState(0)
 

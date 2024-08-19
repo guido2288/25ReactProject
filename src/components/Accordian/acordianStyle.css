@@ -1,11 +1,14 @@
 .wrapper {
     display: flex;
-    height: 100vh;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 20px;
+    padding: 2rem;
+    border-radius: 8px;
     background-color: #0A2344;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
   }
 
 .wrapper h2{
