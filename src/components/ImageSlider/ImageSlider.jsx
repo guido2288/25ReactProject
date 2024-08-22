@@ -48,43 +48,45 @@ const ImageSlider = ({url, limit}) => {
   }
 
   return (
-    <div className="imgSlider-container">
+    <section>
+      <div className="imgSlider-container">
 
 
-      <BsArrowLeftCircleFill className='arrow arrow-left' onClick={handlePrev}/>
-       {
-        images && images.length ? 
-          images.map((image , idx) => (
-            <img 
-              key={image.id}
-              alt={image.download_url}
-              src={image.download_url}
-              className={ currentSlide === idx ? "current-image" : "current-image hide-current-image" }
-            />
-          ))
-          : null
-        }
-
-        <BsArrowRightCircleFill className='arrow arrow-right' onClick={handleNext}/>
-        <span className='circle-indicators'>
-          {
-            images && images.length ?
-            images.map( (_, index) => 
-            <button 
-              key={index} 
-              className={currentSlide === index ? 'current-indicator' :'current-indicator inactive-indicator'}
-              onClick={ () => setCurrentSlide(index) }  
-            >
-              
-            </button> 
-          
-          )
-            :null
+        <BsArrowLeftCircleFill className='arrow arrow-left' onClick={handlePrev}/>
+        {
+          images && images.length ? 
+            images.map((image , idx) => (
+              <img 
+                key={image.id}
+                alt={image.download_url}
+                src={image.download_url}
+                className={ currentSlide === idx ? "current-image" : "current-image hide-current-image" }
+              />
+            ))
+            : null
           }
-        </span> 
 
-        
-    </div>
+          <BsArrowRightCircleFill className='arrow arrow-right' onClick={handleNext}/>
+          <span className='circle-indicators'>
+            {
+              images && images.length ?
+              images.map( (_, index) => 
+              <button 
+                key={index} 
+                className={currentSlide === index ? 'current-indicator' :'current-indicator inactive-indicator'}
+                onClick={ () => setCurrentSlide(index) }  
+              >
+                
+              </button> 
+            
+            )
+              :null
+            }
+          </span> 
+          
+      </div>
+
+    </section>
   )
 }
 

@@ -13,41 +13,45 @@ const StarsRating = ({stars = 5}) => {
   }
 
   return (
-    <div className="starts-container">
+    <section>
+      <div className="starts-container">
 
-        <div className="pop-stars">
-            <FaRedhat className="icon-hat"/>
-            <h2>Please rate our service</h2>
+          <div className="pop-stars">
+              <FaRedhat className="icon-hat"/>
+              <h2>Please rate our service</h2>
 
-            <div className="stars-container">
+              <div className="stars-container">
 
-               {
-                [...Array(stars)].map( (element , idx) => (
-                  
-                  idx  + 1<= rating 
-                  ? <RiStarSFill 
+                {
+                  [...Array(stars)].map( (element , idx) => (
+                    
+                    idx  + 1<= rating 
+                    ? <RiStarSFill 
+                      style={ {cursor: 'pointer'} } 
+                      onClick={ () => handleClick(idx + 1) } 
+                      key={idx}/> 
+
+                    : <RiStarSLine 
                     style={ {cursor: 'pointer'} } 
                     onClick={ () => handleClick(idx + 1) } 
-                    key={idx}/> 
+                    key={idx}/>
 
-                  : <RiStarSLine 
-                  style={ {cursor: 'pointer'} } 
-                  onClick={ () => handleClick(idx + 1) } 
-                  key={idx}/>
+                  ) )
+                } 
 
-                ) )
-               } 
+              </div>
 
-            </div>
+              {
+                rating > 0 && <p>Thanks for your contribution!</p>
+              }
 
-            {
-              rating > 0 && <p>Thanks for your contribution!</p>
-            }
+              
 
-            
+          </div>
+      </div>
 
-        </div>
-    </div>
+
+    </section>
   )
 }
 

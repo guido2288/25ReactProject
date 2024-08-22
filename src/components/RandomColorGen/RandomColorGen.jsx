@@ -41,25 +41,28 @@ const RandomColorGen = () => {
 
 
   return (
-    <div className="wrapper" style={   { background:`${colorStyle}` } }>
-        <div className='randomColor-container'>
-            <div className='btns-container'>
-                <button  onClick={ () => handleChangeTypeColor("HEX")}>Create HEX Color</button>
-                <button onClick={ () => handleChangeTypeColor("RGB")}>Create RGB Color</button>
-                <button onClick={ () => handleChangeTypeColor(typeColor)}>Create Random Color</button>
+    <section>
+        <div className="wrapper" style={   { background:`${colorStyle}` } }>
+            <div className='randomColor-container'>
+                <div className='btns-container'>
+                    <button  onClick={ () => handleChangeTypeColor("HEX")}>Create HEX Color</button>
+                    <button onClick={ () => handleChangeTypeColor("RGB")}>Create RGB Color</button>
+                    <button onClick={ () => handleChangeTypeColor(typeColor)}>Create Random Color</button>
+                </div>
+
+                <h2>
+                    {
+                        typeColor === "HEX"   
+                        ? "HEX "
+                        : "RGB "
+                    } Color</h2>
+
+                <h3>{colorStyle}</h3>
+
             </div>
-
-            <h2>
-                {
-                    typeColor === "HEX"   
-                    ? "HEX "
-                    : "RGB "
-                } Color</h2>
-
-            <h3>{colorStyle}</h3>
-
         </div>
-    </div>
+
+    </section>
   )
 }
 
